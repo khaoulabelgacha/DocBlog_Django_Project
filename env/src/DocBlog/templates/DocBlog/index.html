@@ -1,1 +1,16 @@
+{% load static %}
+<!-- django cherche le dossier static dans l'application-->
+<!--les balises static : {% %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon site web</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 
+<body>
+   <h1>Hello {{ prenom|upper }},Welcome back</h1>
+   <h3>Aujourd'hui c'est le {{ date|date:"d F Y H:i:s" }}</h3>
+</body>
+</html>
